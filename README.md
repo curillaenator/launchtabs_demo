@@ -26,15 +26,15 @@ LaunchApp uses Firebase Google Auth
 - Sass + Styled-components
 - Webpack
 
-## Screenshots
 
 <div align="center">
+  <h3>Screenshots</h3> 
   <img src="/screens/image1.jpg">
-  <h2>Managing user's go-to websites</h2>
+  <h3>Managing user's go-to websites</h3>
   <img src="/screens/image2.jpg">
-  <h2>Sharable richtext notes</h2>
+  <h3>Sharable richtext notes</h3>
   <img src="/screens/image3.jpg">
-  <h2>Customisation</h2>
+  <h3>Customization</h3>
   <img src="/screens/image4.jpg">
 </div>
 
