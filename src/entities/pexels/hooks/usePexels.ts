@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import { useUnit as useEffectorUnit } from 'effector-react';
 import { createClient, type PhotosWithTotalResults } from 'pexels';
 
-import { $pexelsStore, setPexels, setPexelsLoading } from '@src/entities/pexels';
+import { $pexelsStore, setPexels, setPexelsLoading } from '../store';
 
-const client = createClient('C4n9S5rIWDpuE2YVHwTmyZy7CMuHjehR6lsquBxJq2NTIoIatAWR5AT5');
+const pexelsClient = process.env.PEXELS_API_KEY ? createClient(process.env.PEXELS_API_KEY) : null;
 
 const usePexels = () => {
   const { pexels, pexelsLoading, pexelsQuery } = useEffectorUnit($pexelsStore);
@@ -12,7 +12,7 @@ const usePexels = () => {
   const pexelsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    if (!pexelsQuery) {
+    if (!pexelsQuery || !pexelsClient) {
       setPexelsLoading(false);
       return;
     }
@@ -22,7 +22,7 @@ const usePexels = () => {
     pexelsTimer.current = setTimeout(() => {
       setPexelsLoading(true);
 
-      client.photos
+      pexelsClient.photos
         .search({ query: pexelsQuery, per_page: 50, page: 1 })
         .then((res) => {
           setPexels(res as PhotosWithTotalResults);

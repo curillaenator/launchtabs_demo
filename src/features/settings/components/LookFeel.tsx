@@ -9,8 +9,8 @@ import { Switch, Input, Titlewrap } from '@launch-ui/input';
 import { Loader } from '@launch-ui/loader';
 
 import { $settingsStore, setSettings } from '@src/entities/settings';
+import { usePexels } from '@src/entities/pexels';
 import { useDropable } from '@src/hooks/useDropable';
-import { usePexels } from '@src/hooks/usePexels';
 
 import { setPexelsQuery } from '@src/entities/pexels';
 
