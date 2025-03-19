@@ -2,7 +2,7 @@
 
 SPA, Starting/New tab page for browsers
 
-[Deployed app](https://launchtab-81b06.web.app)
+[Deployed LaunchApp](https://launchtab-81b06.web.app)
 
 
 This repo is only for code-demonstration purpose. Repo lacks core app entities and cannot be run local.
@@ -23,18 +23,18 @@ LaunchApp uses Firebase Google Auth
 - React/Typescript/Effector
 - @tanstack/react-query
 - Firebase
-- Sass + Styled-components
+- Sass + Styled-components (both because of demo)
 - Webpack
 
 
 <div align="center">
   <h3>Screenshots</h3> 
   <img src="/screens/image1.jpg">
-  <h3>Managing user's go-to websites</h3>
+  <h3>Manage user's go-to websites</h3>
   <img src="/screens/image2.jpg">
   <h3>Sharable richtext notes</h3>
   <img src="/screens/image3.jpg">
-  <h3>Customization</h3>
+  <h3>View customization</h3>
   <img src="/screens/image4.jpg">
 </div>
 
