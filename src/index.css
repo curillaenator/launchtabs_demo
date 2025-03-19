@@ -1,0 +1,33 @@
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  --layout-ff: system-ui-rounded, ui-rounded, 'SF Pro Rounded', 'SanFrancisco', 'Roboto', sans-serif;
+
+  font-family: var(--layout-ff);
+  background-color: var(--layout-bgc, #fff);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: var(--layout-ff);
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: system-ui-rounded, ui-rounded, 'SF Pro Rounded', 'SanFrancisco', 'Roboto', sans-serif;
+  outline: none;
+  border: none;
+}

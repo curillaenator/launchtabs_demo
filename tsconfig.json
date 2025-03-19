@@ -1,0 +1,15 @@
+{
+  "extends": "@launch-ui/config/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "noEmit": true,
+    "disableSizeLimit": true,
+    "types": ["react", "node"],
+    "paths": {
+      "@src/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["src", "kit", "webpack.config.js"]
+}
