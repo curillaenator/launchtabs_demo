@@ -5,7 +5,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useUnit as useEffectorUnit } from 'effector-react';
 import { keys } from 'lodash';
 
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { ButtonGhost, ButtonAction } from '@launch-ui/button';
 import { Input } from '@launch-ui/input';
 import { Typography } from '@launch-ui/typography';
@@ -14,7 +14,6 @@ import { $userStore } from '@src/entities/user';
 import { useCreateSpace, LaunchSpaceProps } from '@src/entities/space';
 
 import { CreateSpaceForm } from './createSpace.styled';
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import { USER_QUERY } from '@src/shared/queryKeys';
 
@@ -50,7 +49,7 @@ const CreateSpace: FC<{ maxHeight: number }> = () => {
         createSpace(spaceData);
       })}
     >
-      <Corners borderRadius={LAUNCH_PAPER_BDRS} />
+      <Corners borderRadius={BDRS[24]} />
 
       <div className='create-space-form-title'>
         <Typography as='span' type='RoundedHeavy36'>

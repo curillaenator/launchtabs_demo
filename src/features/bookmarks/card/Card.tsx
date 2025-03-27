@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
 
 import { Typography } from '@launch-ui/typography';
-import { Corners } from '@launch-ui/shape';
-
-import { LAUNCH_CARD_BDRS } from '@src/shared/appConfig';
+import { Corners, BDRS } from '@launch-ui/shape';
 
 import { getValidatedHref } from './utils';
 
@@ -26,7 +24,7 @@ const BookmarkCard: FC<CardProps> = (props) => {
         }
       }}
     >
-      <Corners borderRadius={LAUNCH_CARD_BDRS} stroke={6} />
+      <Corners borderRadius={BDRS[32]} stroke={6} />
 
       <CardImage {...bookmark} />
 

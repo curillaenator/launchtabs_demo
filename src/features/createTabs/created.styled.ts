@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
-import { LAUNCH_CARD_BDRS } from '@src/shared/appConfig';
+import { BDRS } from '@launch-ui/shape';
 
 const CreateTabButton = styled.div<{ active: boolean }>`
   --shp-bdc: ${({ theme }) => theme.backgrounds.base};
 
   color: ${({ theme }) => theme.backgrounds.base};
-  border-radius: calc(${LAUNCH_CARD_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[32]}px * 1.25 + 3px);
   position: relative;
   display: flex;
   align-items: center;

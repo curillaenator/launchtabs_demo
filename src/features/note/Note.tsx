@@ -2,7 +2,7 @@ import React, { FC, useCallback, useRef, useEffect } from 'react';
 import { useUnit as useEffectorUnit } from 'effector-react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Loader } from '@launch-ui/loader';
 import { RichTextField, RichTextEditor, type RichtextChangeEvent } from '@launch-ui/richtext';
 
@@ -24,8 +24,6 @@ import {
 } from '@src/entities/note';
 
 import { useICan } from '@src/hooks/useICan';
-
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import { NoteHeader } from './components/NoteHeader';
 import { NoteContainer } from './note.styled';
@@ -120,7 +118,7 @@ const Note: FC<{ maxHeight: number }> = ({ maxHeight }) => {
 
   return (
     <NoteContainer height={maxHeight} data-note editable={isNoteEditable}>
-      <Corners borderRadius={LAUNCH_PAPER_BDRS} />
+      <Corners borderRadius={BDRS[24]} />
 
       {isNoteBodyLoading ? (
         <Loader view='fit-parent' iconSize='48px' />
@@ -134,7 +132,7 @@ const Note: FC<{ maxHeight: number }> = ({ maxHeight }) => {
           extensionsOptions={{
             linkRoute: {
               navTo: (to) => {
-                console.log('linkRoute cfg', to);
+                // console.log('linkRoute cfg', to);
                 navigate(to);
               },
             },

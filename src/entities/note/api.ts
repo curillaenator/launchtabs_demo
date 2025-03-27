@@ -27,8 +27,6 @@ const deleteNoteMutationQuery = async (payload: DeleteNoteMutationQueryPayload) 
     order <= parentHierarchy[unitCode] ? order : order - 1,
   );
 
-  console.log('clearedParentHierarchy', clearedParentHierarchy);
-
   // перенос детей удаляемого юнита в родителя юнита
   if (!!keys(unitHierarchy).length) {
     await updateDoc(doc(fsdb, dbPath, parentId as string), {

@@ -4,7 +4,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import styled from 'styled-components';
 import { keys } from 'lodash';
 
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { ButtonGhost } from '@launch-ui/button';
 import { Loader } from '@launch-ui/loader';
 import { Typography } from '@launch-ui/typography';
@@ -13,7 +13,6 @@ import { $userStore } from '@src/entities/user';
 import { LaunchUnitProps } from '@src/entities/note';
 
 import { UNIT_NOTE_UNIT_QUERY } from '@src/shared/queryKeys';
-import { LAUNCH_CARD_BDRS } from '@src/shared/appConfig';
 
 import SetupIcon from '@src/assets/svg/switches.svg';
 import SpaceIcon from '@src/assets/svg/space.svg';
@@ -23,7 +22,7 @@ const Card = styled.div`
   --shp-bdc: transparent;
 
   position: relative;
-  border-radius: calc(${LAUNCH_CARD_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[32]}px * 1.25 + 3px);
   background-color: ${({ theme }) => theme.backgrounds.light};
   padding: calc(var(--layout-pd) / 2) 16px;
 `;
@@ -82,7 +81,7 @@ const DashCard: FC<DashCardProps> = (props) => {
 
   return (
     <Card {...restDiv} data-space-card={title}>
-      <Corners borderRadius={LAUNCH_CARD_BDRS} />
+      <Corners borderRadius={BDRS[32]} />
 
       <CardContent>
         <div className='card-content-top'>

@@ -7,12 +7,13 @@ import { debounce } from 'lodash';
 import { Loader } from '@launch-ui/loader';
 import { Drawer } from '@launch-ui/drawer';
 import { Modal } from '@launch-ui/modal';
+import { BDRS } from '@launch-ui/shape';
 
 import { Header } from '@src/features/header';
 import { Aside } from '@src/features/aside';
 import { Background } from '@src/features/background';
 import { Settings } from '@src/features/settings';
-import { SignIn } from '@src/features/signin';
+import { AuthForm } from '@src/features/authForm';
 
 import { $appStore, setSignIn, setRightDrawer } from '@src/entities/app';
 import { $userStore, useLauncUserData } from '@src/entities/user';
@@ -20,8 +21,8 @@ import { $settingsStore } from '@src/entities/settings';
 import { setHeaderShadowed } from '@src/entities/header';
 
 import { useThemeToCssv } from '@src/hooks/useThemeToCssv';
+import { useAppDemo } from '@src/hooks/useAppDemo';
 
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 import { MAIN_ELEMENT_ID, DRAWER_PORTAL_ID, MODAL_PORTAL_ID } from '@src/shared/appContainers';
 
 import { useContextValue } from './useContextValue';
@@ -30,6 +31,8 @@ import { $layoutContex as LayoutCTX } from './context';
 import { LayoutStyled, MainStyled } from './layout.styled';
 
 export const Layout: FC = () => {
+  const { isDemo, onCancelAppDemo } = useAppDemo();
+
   const user = useEffectorUnit($userStore);
   const { isLoading } = useLauncUserData(user);
 
@@ -101,9 +104,9 @@ export const Layout: FC = () => {
             portalId={MODAL_PORTAL_ID}
             open={isSignInOpen}
             onClose={() => setSignIn(false)}
-            borderRadius={LAUNCH_PAPER_BDRS}
+            borderRadius={BDRS[24]}
           >
-            <SignIn closePopup={() => setSignIn(false)} />
+            <AuthForm isDemo={isDemo} closePopup={() => setSignIn(false)} onCancelAppDemo={onCancelAppDemo} />
           </Modal>
         )}
       </LayoutStyled>

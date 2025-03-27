@@ -1,4 +1,5 @@
-import { signOut, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { signOut, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
+
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { fsdb, auth } from '@src/api/firebase';
 import { pick } from 'lodash';
@@ -14,9 +15,14 @@ import { NULL_USER } from './contants';
 import { DEFAULT_PAGES } from '../bookmarks/constants';
 import { DEFAULT_SETTINGS } from '../settings/constants';
 
-import type { LaunchStoreUser } from './interfaces';
+import type { LaunchStoreUser, LaunchUserCreds } from './interfaces';
 
 const googleProvider = new GoogleAuthProvider();
+
+const demoUserLogin = ({ email, password }: LaunchUserCreds) => {
+  // createUserWithEmailAndPassword(auth, email, password);
+  signInWithEmailAndPassword(auth, email, password);
+};
 
 const login = () => {
   signInWithPopup(auth, googleProvider);
@@ -52,4 +58,4 @@ async function getUserLaunchDataQuery(user: LaunchStoreUser) {
   return pick(dbUser, ['spaces', 'lastViewedSpace', 'settings', 'admin']) as Partial<LaunchStoreUser>;
 }
 
-export { login, logout, getUserLaunchDataQuery };
+export { login, demoUserLogin, logout, getUserLaunchDataQuery };

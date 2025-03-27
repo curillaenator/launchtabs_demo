@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useMemo } from 'react';
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Button } from '@launch-ui/button';
 import { Dropable } from '@launch-ui/dropable';
 
@@ -11,7 +11,6 @@ import { TabPopup } from './components/TabPopup';
 import { LinkPopup } from './components/LinkPopup';
 
 import { useDropable } from '@src/hooks/useDropable';
-import { LAUNCH_CARD_BDRS } from '@src/shared/appConfig';
 
 import LinkIcon from '@src/assets/svg/link.svg';
 import AddTabIcon from '@src/assets/svg/addTab.svg';
@@ -40,7 +39,7 @@ const CreateTabs: FC<{ create: 'new-page' | 'new-bookmark' }> = ({ create }) => 
             <Button active={isCteareOpen} IconLeft={() => <AddTabIcon />} />
           ) : (
             <CreateTabButton active={!!isCteareOpen}>
-              <Corners borderRadius={LAUNCH_CARD_BDRS} stroke={6} />
+              <Corners borderRadius={BDRS[32]} stroke={6} />
               <LinkIcon width={32} height={32} viewBox='0 0 24 24' fill='none' />
             </CreateTabButton>
           )

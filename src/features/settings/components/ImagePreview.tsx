@@ -1,8 +1,6 @@
 import React, { FC, ImgHTMLAttributes } from 'react';
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import styled from 'styled-components';
-
-import { LAUNCH_CARD_BDRS } from '@src/shared/appConfig';
 
 interface ImagePreviewProps extends ImgHTMLAttributes<HTMLImageElement> {
   clickable?: boolean;
@@ -33,7 +31,7 @@ const ImagePreviewStyled = styled.div<ImagePreviewProps>`
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: calc(${LAUNCH_CARD_BDRS}px * 1.25 + 3px);
+    border-radius: calc(${BDRS[32]}px * 1.25 + 3px);
     user-select: none;
 
     &_active {
@@ -46,7 +44,7 @@ export const ImagePreview: FC<ImagePreviewProps> = (props) => {
 
   return (
     <ImagePreviewStyled active={active} clickable={clickable} avgColor={avgColor} onClick={onClick}>
-      <Corners borderRadius={LAUNCH_CARD_BDRS} stroke={6} />
+      <Corners borderRadius={BDRS[32]} stroke={6} />
 
       {src && <img {...rest} className='preview-image' src={src} alt={alt} draggable={false} />}
     </ImagePreviewStyled>

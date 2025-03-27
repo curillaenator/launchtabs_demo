@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
+import { BDRS } from '@launch-ui/shape';
 
 const CreateSpaceForm = styled.form`
   --shp-bgc: ${({ theme }) => theme.backgrounds.base};
@@ -11,7 +11,7 @@ const CreateSpaceForm = styled.form`
 
   width: 100%;
 
-  border-radius: calc(${LAUNCH_PAPER_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[24]}px * 1.25 + 3px);
   background-color: ${({ theme }) => theme.backgrounds.base};
   padding: var(--layout-pd);
 

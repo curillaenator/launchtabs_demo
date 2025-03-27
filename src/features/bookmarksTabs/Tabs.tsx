@@ -7,6 +7,7 @@ import { arrayMoveImmutable } from 'array-move';
 import { Button, ButtonAction, ButtonGhost } from '@launch-ui/button';
 import { Typography } from '@launch-ui/typography';
 import { Modal } from '@launch-ui/modal';
+import { BDRS } from '@launch-ui/shape';
 
 import { CreateTabs } from '@src/features/createTabs';
 
@@ -14,7 +15,6 @@ import { $userStore } from '@src/entities/user';
 import { $bookmarksStore, setCurrentTab, setTabsWithDbUpdate, removeTab } from '@src/entities/bookmarks';
 
 import { MODAL_PORTAL_ID } from '@src/shared/appContainers';
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import HomeIcon from '@src/assets/svg/home.svg';
 import TabsSetupIcon from '@src/assets/svg/switches.svg';
@@ -93,7 +93,7 @@ export const Tabs: FC = () => {
           portalId={MODAL_PORTAL_ID}
           open={isSetupOpen}
           onClose={() => setIsSetupOpen(false)}
-          borderRadius={LAUNCH_PAPER_BDRS}
+          borderRadius={BDRS[24]}
         >
           <TabsSetupStyled>
             <Typography type='RoundedHeavy36'>Tabs Setup</Typography>

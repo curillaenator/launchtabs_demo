@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { LAUNCH_CARD_BDRS } from '@src/shared/appConfig';
+import { BDRS } from '@launch-ui/shape';
 
 const CardStyled = styled(Link)`
   --shp-bgc: transparent;
@@ -14,7 +14,7 @@ const CardStyled = styled(Link)`
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: calc(${LAUNCH_CARD_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[32]}px * 1.25 + 3px);
   background-color: ${({ theme }) => theme.backgrounds.base};
 
   text-decoration: none;

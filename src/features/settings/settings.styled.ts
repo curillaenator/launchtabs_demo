@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
+import { BDRS } from '@launch-ui/shape';
 
 const SettingsStyled = styled.div`
   width: 100%;
@@ -11,7 +10,7 @@ const SettingsStyled = styled.div`
     --shp-bgc: ${({ theme }) => theme.backgrounds.base};
     --shp-bdc: transparent;
 
-    --form-bdrs: calc(${LAUNCH_PAPER_BDRS}px * 1.25 + 3px);
+    --form-bdrs: calc(${BDRS[24]}px * 1.25 + 3px);
 
     position: relative;
     display: flex;

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useUnit as useEffectorUnit } from 'effector-react';
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { logout } from '@src/entities/user';
 
 import { ButtonGhost, ButtonAction } from '@launch-ui/button';
@@ -14,8 +14,6 @@ import { $settingsStore, saveSettingsQuery } from '@src/entities/settings';
 import { Scrollbars } from '@src/features/scrollbars';
 import { SettingsStyled } from './settings.styled';
 
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
-
 import LogoutIcon from '@src/assets/svg/logout.svg';
 import SaveIcon from '@src/assets/svg/save.svg';
 
@@ -28,7 +26,7 @@ export const Settings: FC = () => {
   return (
     <SettingsStyled>
       <div className='form'>
-        <Corners borderRadius={LAUNCH_PAPER_BDRS} corners={['tl', 'bl']} />
+        <Corners borderRadius={BDRS[24]} corners={['tl', 'bl']} />
 
         <div className='form-title'>
           <Typography as='h2' type='RoundedHeavy36' className='form-title-themed'>

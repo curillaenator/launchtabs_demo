@@ -2,7 +2,7 @@ import React, { FC, memo } from 'react';
 
 import { useUnit as useEffectorUnit } from 'effector-react';
 
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Typography } from '@launch-ui/typography';
 
 import { AsideNotesElement } from '../asideNotesElem';
@@ -10,8 +10,6 @@ import { AsideHeader, AsideRoutesList, AsideStyled, RouteLinkStyled, RouteDivide
 
 import { $appStore } from '@src/entities/app';
 import { $userStore } from '@src/entities/user';
-
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import GridIcon from '@src/assets/svg/grid.svg';
 import NotesIcon from '@src/assets/svg/document.svg';
@@ -23,7 +21,7 @@ export const Aside: FC = memo(() => {
 
   return (
     <AsideStyled isAsideOpen={isAsideOpen}>
-      <Corners borderRadius={LAUNCH_PAPER_BDRS} corners={['tr', 'br']} />
+      <Corners borderRadius={BDRS[24]} corners={['tr', 'br']} />
 
       <AsideHeader>
         <Typography as='span' type='RoundedHeavy36'>

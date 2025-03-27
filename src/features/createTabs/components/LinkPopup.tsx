@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react';
 import styled from 'styled-components';
 
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Input } from '@launch-ui/input';
 import { Typography } from '@launch-ui/typography';
 import { ButtonAction, ButtonGhost } from '@launch-ui/button';
@@ -12,8 +12,6 @@ import { useCustomIcons } from '../hooks/useCustomIcons';
 
 import { Scrollbars } from '@src/features/scrollbars';
 import { BookmarkCard } from '@src/features/bookmarks/card';
-
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import LabelIcon from '@src/assets/svg/lable.svg';
 import LinkIcon from '@src/assets/svg/link.svg';
@@ -31,7 +29,7 @@ const NewTabForm = styled.form`
   padding: var(--layout-pd);
 
   background-color: var(--shp-bgc);
-  border-radius: calc(${LAUNCH_PAPER_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[24]}px * 1.25 + 3px);
   filter: drop-shadow(${({ theme }) => theme.shadows.base});
 
   .popup-title {
@@ -124,8 +122,7 @@ const LinkPopup: FC<{ closePopup?: () => void }> = ({ closePopup }) => {
       }}
       onMouseDown={(e) => e.stopPropagation()}
     >
-      {/* Испольтзован Shape чтобы отбросить красивую тень */}
-      <Corners borderRadius={LAUNCH_PAPER_BDRS} />
+      <Corners borderRadius={BDRS[24]} />
 
       <div className='popup-title'>
         <Typography as='h2' type='RoundedHeavy24'>

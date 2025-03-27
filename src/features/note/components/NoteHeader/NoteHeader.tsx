@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { keys } from 'lodash';
 
 import { Modal } from '@launch-ui/modal';
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Loader } from '@launch-ui/loader';
 import { Typography } from '@launch-ui/typography';
 import { ButtonAction, ButtonGhost } from '@launch-ui/button';
@@ -13,7 +13,7 @@ import { $noteStore, useNoteUnitData, type NotesRouteParams } from '@src/entitie
 
 import { useICan } from '@src/hooks/useICan';
 import { MODAL_PORTAL_ID } from '@src/shared/appContainers';
-import { LAUNCH_PAPER_BDRS, LAUNCH_HEADER_BDRS, MAX_UNITS_PER_UNIT, MAX_UNITS_DEPTH } from '@src/shared/appConfig';
+import { MAX_UNITS_PER_UNIT, MAX_UNITS_DEPTH } from '@src/shared/appConfig';
 
 import { SetupNote } from '../SetupNote';
 import { NoteHeaderBlockStyled, NoteHeaderStyled, SaveNotification } from './noteHeader.styled';
@@ -72,7 +72,7 @@ export const NoteHeader: FC = () => {
   return (
     <>
       <NoteHeaderStyled data-note-header>
-        <Corners borderRadius={LAUNCH_HEADER_BDRS} />
+        <Corners borderRadius={BDRS[20]} />
 
         <NoteHeaderBlockStyled data-flex-shrinked-block>
           {isNoteUnitLoading ? (
@@ -143,12 +143,7 @@ export const NoteHeader: FC = () => {
         </NoteHeaderBlockStyled>
       </NoteHeaderStyled>
 
-      <Modal
-        portalId={MODAL_PORTAL_ID}
-        open={editOpen}
-        onClose={() => setEditOpen(false)}
-        borderRadius={LAUNCH_PAPER_BDRS}
-      >
+      <Modal portalId={MODAL_PORTAL_ID} open={editOpen} onClose={() => setEditOpen(false)} borderRadius={BDRS[24]}>
         {noteUnit && iCanEdit && <SetupNote closePopup={() => setEditOpen(false)} unit={noteUnit} />}
       </Modal>
     </>

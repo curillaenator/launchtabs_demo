@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FormStyled = styled.form`
+const FormStyled = styled.form`
   width: 100%;
   background-color: transparent;
   width: 420px;
@@ -40,3 +40,5 @@ export const FormStyled = styled.form`
     }
   }
 `;
+
+export { FormStyled };

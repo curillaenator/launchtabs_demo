@@ -4,12 +4,10 @@ import styled from 'styled-components';
 
 import type { RichTextJsonContent } from '@launch-ui/richtext';
 import { Loader } from '@launch-ui/loader';
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Typography } from '@launch-ui/typography';
 
 import type { LaunchUnitProps } from '@src/entities/note';
-
-import { LAUNCH_HEADER_BDRS } from '@src/shared/appConfig';
 
 const NoteHeaderStyled = styled.div`
   --shp-bgc: ${({ theme }) => theme.backgrounds.base};
@@ -25,7 +23,7 @@ const NoteHeaderStyled = styled.div`
 
   width: 100%;
   height: 48px;
-  border-radius: calc(${LAUNCH_HEADER_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[20]}px * 1.25 + 3px);
   background-color: ${({ theme }) => theme.backgrounds.base};
   margin: 0 24px;
 
@@ -78,7 +76,7 @@ const CreateNoteHeader: FC<CreateNoteHeaderProps> = (props) => {
 
   return (
     <NoteHeaderStyled data-create-note-header>
-      <Corners borderRadius={LAUNCH_HEADER_BDRS} />
+      <Corners borderRadius={BDRS[20]} />
 
       <input
         autoComplete='off'

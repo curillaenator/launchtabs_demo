@@ -1,6 +1,11 @@
 import { BookmarkTabProps } from '@src/entities/bookmarks';
 import { SettingsStore } from '@src/entities/settings';
 
+interface LaunchUserCreds {
+  email: string;
+  password: string;
+}
+
 interface LaunchStoreUser {
   admin?: boolean;
   uid: string | null;
@@ -16,4 +21,4 @@ interface LaunchUserData extends LaunchStoreUser {
   pages: BookmarkTabProps[];
 }
 
-export type { LaunchStoreUser, LaunchUserData };
+export type { LaunchStoreUser, LaunchUserData, LaunchUserCreds };

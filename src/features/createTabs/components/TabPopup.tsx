@@ -4,11 +4,9 @@ import styled from 'styled-components';
 import { CreateFormCTX } from '../context';
 
 import { Input } from '@launch-ui/input';
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Typography } from '@launch-ui/typography';
 import { ButtonAction, ButtonGhost } from '@launch-ui/button';
-
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import LabelIcon from '@src/assets/svg/lable.svg';
 import CreateIcon from '@src/assets/svg/addTab.svg';
@@ -28,7 +26,7 @@ const PopupForm = styled.form`
     overflow: visible;
 
     background-color: var(--shp-bgc);
-    border-radius: calc(${LAUNCH_PAPER_BDRS}px * 1.25 + 3px);
+    border-radius: calc(${BDRS[24]}px * 1.25 + 3px);
     filter: drop-shadow(${({ theme }) => theme.shadows.base});
 
     &-title {
@@ -72,7 +70,7 @@ const TabPopup: FC<{ closePopup?: () => void }> = ({ closePopup }) => {
       }}
     >
       <div className='popup'>
-        <Corners className='popup-shape' borderRadius={LAUNCH_PAPER_BDRS} />
+        <Corners className='popup-shape' borderRadius={BDRS[24]} />
 
         <div className='popup-title'>
           <Typography as='h2' type='RoundedHeavy24'>

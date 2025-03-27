@@ -75,7 +75,7 @@ const SetupSpace: FC<SetupSpaceProps> = (props) => {
   return (
     <SetupSpaceStyled
       onSubmit={handleSubmit((formData) => {
-        console.log('formData', formData);
+        // console.log('formData', formData);
         updateSpace(formData);
       })}
     >

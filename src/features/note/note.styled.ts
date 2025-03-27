@@ -1,7 +1,6 @@
 import { CSSProperties } from 'react';
 import styled from 'styled-components';
-
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
+import { BDRS } from '@launch-ui/shape';
 
 interface NoteContainerProps {
   editable: boolean;
@@ -21,7 +20,7 @@ const NoteContainer = styled.div<NoteContainerProps>`
   width: 100%;
   flex: 1 1 auto;
   height: ${({ height }) => `${height}px` || 'fit-content'};
-  border-radius: calc(${LAUNCH_PAPER_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[24]}px * 1.25 + 3px);
   background-color: ${({ theme }) => theme.backgrounds.base};
   padding-top: ${({ editable }) => (editable ? 'var(--layout-pd)' : '0')};
 `;

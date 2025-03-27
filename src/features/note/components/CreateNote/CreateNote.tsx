@@ -3,15 +3,13 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { debounce, keys, toPairs } from 'lodash';
 
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { ButtonGhost, ButtonAction } from '@launch-ui/button';
 import { RichTextField, type RichtextChangeEvent, type RichTextJsonContent } from '@launch-ui/richtext';
 import { Typography } from '@launch-ui/typography';
 
 import { setHeaderMidComponent } from '@src/entities/header';
 import { type LaunchUnitProps, useNoteCreate } from '@src/entities/note';
-
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import { CreateNoteHeader } from './CreateNoteHeader';
 import { CreateNoteForm } from './createNote.styled';
@@ -60,7 +58,7 @@ const CreateNote: FC<{ maxHeight: number }> = ({ maxHeight }) => {
       data-create-note-form
       onSubmit={handleSubmit((formData: NoteFormFields) => submitNewNoteData({ formData }))}
     >
-      <Corners borderRadius={LAUNCH_PAPER_BDRS} />
+      <Corners borderRadius={BDRS[24]} />
 
       <RichTextField maxHeight={maxHeight - 48 - 40} initialValue={''} onChange={onRichTextChange} />
 

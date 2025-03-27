@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-import { LAUNCH_HEADER_BDRS } from '@src/shared/appConfig';
+import { BDRS } from '@launch-ui/shape';
 
 const NoteHeaderStyled = styled.div`
   --shp-bgc: ${({ theme }) => theme.backgrounds.base};
@@ -16,7 +15,7 @@ const NoteHeaderStyled = styled.div`
 
   width: calc(100% - (var(--layout-pd) + 16px) * 2 - 64px);
   height: 48px;
-  border-radius: calc(${LAUNCH_HEADER_BDRS}px * 1.25 + 3px);
+  border-radius: calc(${BDRS[20]}px * 1.25 + 3px);
   background-color: ${({ theme }) => theme.backgrounds.base};
   margin: 0 24px;
 `;

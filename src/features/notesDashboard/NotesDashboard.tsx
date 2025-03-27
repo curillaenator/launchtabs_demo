@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { useUnit as useEffectorUnit } from 'effector-react';
 
 import { Typography } from '@launch-ui/typography';
-import { Corners } from '@launch-ui/shape';
+import { Corners, BDRS } from '@launch-ui/shape';
 import { Modal } from '@launch-ui/modal';
 
 import { $userStore } from '@src/entities/user';
@@ -11,7 +11,6 @@ import { LaunchSpaceProps, useSpaces } from '@src/entities/space';
 import { SetupSpace } from '@src/features/space';
 
 import { MODAL_PORTAL_ID } from '@src/shared/appContainers';
-import { LAUNCH_PAPER_BDRS } from '@src/shared/appConfig';
 
 import { DashCard } from './DashCard';
 import { NoteContainer } from './dashboard.styled';
@@ -27,7 +26,7 @@ const NotesDashboard: FC<{ maxHeight: number }> = ({ maxHeight }) => {
   return (
     <>
       <NoteContainer height={maxHeight}>
-        <Corners borderRadius={LAUNCH_PAPER_BDRS} />
+        <Corners borderRadius={BDRS[24]} />
 
         <div className='dashboard-block'>
           <Typography as='span' type='RoundedHeavy24'>
@@ -68,7 +67,7 @@ const NotesDashboard: FC<{ maxHeight: number }> = ({ maxHeight }) => {
       </NoteContainer>
 
       <Modal
-        borderRadius={LAUNCH_PAPER_BDRS}
+        borderRadius={BDRS[24]}
         portalId={MODAL_PORTAL_ID}
         open={spaceSetupOpen}
         onClose={() => {
