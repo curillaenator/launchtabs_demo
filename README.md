@@ -2,7 +2,7 @@
 
 SPA, Starting/New tab page for browsers
 
-[Deployed LaunchApp](https://launchtab-81b06.web.app)
+[Deployed LaunchApp](https://launchtab-81b06.web.app/?auth=demo)
 
 
 This repo is only for code-demonstration purpose. Repo lacks core app entities and cannot be run local.
