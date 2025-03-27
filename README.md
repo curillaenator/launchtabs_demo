@@ -1,22 +1,16 @@
-# LaunchApp 2.0
+# LaunchApp
 
-SPA, Starting/New tab page for browsers
+SPA, Starting page for browsers / Приложение стартовых страниц браузеры
 
-[Deployed LaunchApp](https://launchtab-81b06.web.app/?auth=demo)
+[Стенд с приложением LaunchApp](https://launchtab-81b06.web.app/?auth=demo)
 
-
-This repo is only for code-demonstration purpose. Repo lacks core app entities and cannot be run local.
-Source code is under another private repository due to app's core features
-
-## Description
+## Description / Описание
 
 LaunchApp is customizible starting/new tab browser's pages allowing manage user's go-to websites and sharable wiki-like notes with built-in richtext editor
 
+Прилоежние LaunchApp предоставляет настраиваемую стартовую страницу вкладок браузера для управления посещаемыми пользователем веб-сайтами, а так же сервис хранения и публикации личных заметок (Notion-like документы)
+
 [About LaunchTabs + Docs](https://launchtab-81b06.web.app/notes/jtG8WhhR5KHtpBxqtUs5)
-
-## Auth
-
-LaunchApp uses Firebase Google Auth
 
 ## Stack
 
@@ -24,7 +18,6 @@ LaunchApp uses Firebase Google Auth
 - Firebase
 - Styled-components
 - Webpack
-
 
 <div align="center">
   <h3>Screenshots</h3> 
@@ -36,5 +29,13 @@ LaunchApp uses Firebase Google Auth
   <h3>View customization</h3>
   <img src="/screens/image4.jpg">
 </div>
+
+## Disclaimer
+
+This repo is only for code-demonstration purpose. Repo lacks core app entities and cannot be run local.
+Source code is under another private repository due to app's core features
+
+Это репо предназначено только для демонстрации код-стиля. В репо отсутствуют некоторые важные компоненты приложения и его не запустить локально.
+Исходный код находится в другом приватном репозитории ввиду некоторых ключевых фичей.
 
 
