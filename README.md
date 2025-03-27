@@ -31,9 +31,9 @@ LaunchApp is customizible starting/new tab browser's pages allowing manage user'
 ## Disclaimer
 
 This repo is only for code-demonstration purpose. Repo lacks core app entities and cannot be run local.
-Source code is under another private repository due to app's core features
+Full source code is under another private repository due to app's core features
 
 Это репо предназначено только для демонстрации код-стиля. В репо отсутствуют некоторые важные компоненты приложения и его не запустить локально.
-Исходный код находится в другом приватном репозитории ввиду некоторых ключевых фичей.
+Полный исходный код находится в другом приватном репозитории ввиду некоторых ключевых фичей.
 
 
