@@ -20,10 +20,9 @@ LaunchApp uses Firebase Google Auth
 
 ## Stack
 
-- React/Typescript/Effector
-- @tanstack/react-query
+- React/Typescript/Effector/@tanstack-react-query
 - Firebase
-- Sass + Styled-components (both because of demo)
+- Styled-components
 - Webpack
 
 
