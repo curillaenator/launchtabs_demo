@@ -1,8 +1,6 @@
 # LaunchApp
 
-SPA, Starting page for browsers / Приложение стартовых страниц браузеры
-
-[Стенд с приложением LaunchApp](https://launchtab-81b06.web.app/?auth=demo)
+[Watch deployed app / Посмотреть развёрнутое приложение ](https://launchtab-81b06.web.app/?auth=demo)
 
 ## Description / Описание
 
